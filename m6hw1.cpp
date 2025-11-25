@@ -1,7 +1,7 @@
 /*
 CSC 134 
 Olivia DeLellis
-M5LAB1
+M6HW1
 7 November 2025
 */
 
@@ -13,6 +13,8 @@ void main_menu();
 void choice_front_door();
 void choice_back_door();
 void choice_go_home();
+void choice_order_pizza();
+void choice_watch_movie();
 
 int main() {
     main_menu();
@@ -59,5 +61,24 @@ void choice_back_door() {
 }
 
 void choice_go_home() {
-    cout << "You decide it's safer to go home. Game over." << endl;
+    cout << "You decide it's safer to go home." << endl;
+    cout << "1. Order some pizza" << endl;
+    cout << "2. Watch a movie" << endl;
+    cout << "Choose: ";
+    int choice;
+    cin >> choice;
+    // 1, pizza, 2, movie
+    if (choice == 1) {
+        choice_order_pizza();
+    }
+    if (choice == 2) {
+        choice_watch_movie();
+    }
+
+}
+void choice_order_pizza() {
+    cout << "You just ordered pizza!" << endl;
+}
+void choice_watch_movie(){
+    cout << "You decided to watch The Conjuring";
 }
