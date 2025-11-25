@@ -15,6 +15,7 @@ void choice_back_door();
 void choice_go_home();
 void choice_order_pizza();
 void choice_watch_movie();
+void choice_go_to_sleep();
 
 int main() {
     main_menu();
@@ -64,21 +65,55 @@ void choice_go_home() {
     cout << "You decide it's safer to go home." << endl;
     cout << "1. Order some pizza" << endl;
     cout << "2. Watch a movie" << endl;
+    cout << "3. Turn off the lights and go to bed" << endl;
     cout << "Choose: ";
     int choice;
     cin >> choice;
-    // 1, pizza, 2, movie
+    // 1, pizza, 2, movie, 3, go to bed
     if (choice == 1) {
         choice_order_pizza();
     }
     if (choice == 2) {
         choice_watch_movie();
     }
+    if (choice == 3){
+        choice_go_to_sleep();
+    }
+
 
 }
 void choice_order_pizza() {
     cout << "You just ordered pizza!" << endl;
+    cout << "Cheese or Pepporoni?" << endl;
+    cout << "Choose: ";
+    int choice;
+    cin >> choice;
+// 1, cheese, 2, pepporoni 
+    if (choice == 1){
+        cout << "Cheese" << endl;
+    }
+    if (choice == 2){
+        cout << "Pepperoni" << endl; 
+    }
+    cout << "Enjoy your pizza!" << endl;
 }
 void choice_watch_movie(){
-    cout << "You decided to watch The Conjuring";
+    cout << "You decided to watch The Conjuring" << endl; 
+    cout << "There is a knock at the door"  << endl;  
+    cout << "Do you want to see who it is?"  << endl;  
+    cout << "Yes or No?"  << endl;  
+    int choice;
+    cin >> choice; 
+    if (choice == 1){
+        cout << "Yes!" << endl;
+        cout << "It is just the little kids trick or treating";
+    }
+    if (choice == 2){
+        cout << "NOOOOO!" << endl;
+        cout << "Continue watching the movie"; 
+    }
+
+}
+void choice_go_to_sleep(){
+    cout << "Goodnight!" << endl;
 }
